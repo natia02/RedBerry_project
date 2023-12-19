@@ -1,0 +1,72 @@
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400');
+
+
+body{
+    font-family: 'FiraGO', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e4e3eb;
+}
+
+header{
+    background-color: #ffffff;
+    height: 80px;
+    border: 0px, 0px, 1px, 0px;
+}
+
+#logo{
+    margin-top: 28px;
+    margin-left: 76px;
+}
+
+#title{
+    float: left;
+    width: 225px;
+    height: 72px;
+    font-size: 64px;
+    line-height: 72px;
+    font-weight: 1000 !important;
+    color: #1a1a1f;
+    margin-top: 150px;
+    margin-left: 89px;
+}
+
+#decoration{
+    float: right;
+    margin-top: 100px;
+    margin-right: 100px;
+}
+
+#login{
+    float: right;
+    Width: 93px !important;
+    Height: 40px !important;
+    margin-top:20px;
+    margin-right:100px;
+    Padding: 10px, 20px, 10px, 20px;
+    Gap:10px;
+    background-color: #5d37f3;
+    color: #ffffff;
+    border-radius: 8px;
+    border:none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;;
+    font-family: 'FiraGO', sans-serif;
+}
+
+#categories {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 350px;
+}
+
+.category {
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'firaGO', sans-serif !important;
+}
