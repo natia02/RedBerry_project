@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/add_blog.css">
+    <script src="js/add_blog.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img id="logo" src="media/LOGO-02 3.png" alt="logo">
+        </a>
+        
+    </header>
+    
+    <div id="container">
+        <h1 id = 'head-title'>ბლოგის დამატება</h1>
+        <form action="add_blog.php" method="POST" enctype="multipart/form-data">
+            <div id= "row-img">
+                <label for="photo" id="labels">ატვირთეთ ფოტო</label><br>
+                <div id="uploaded">
+                    <img id="gallery" src="media/gallery.png" alt="uploaded-img">
+                    <p id="img-name">hello.png</p>
+                    <div id="remove-img" onclick="removeImage()"><img src="media/add.png" alt="remove-img"></div>
+                </div>
+                <div id="img-container" onclick="triggerFileInput()" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+                    <img id="upload-icon" src="media/folder-add.png" alt="upload-icon"><br>
+                    <label for="image" id="custom-label">ჩააგდეთ ფაილი აქ ან <a id="choose">აირჩიეთ ფაილი</a></label>
+                    <input type="file" id="image" name="image" class="image" accept="image/*" onchange="handleFileSelection(this)">
+                </div>
+                
+            </div>
+            
+            <div id = 'row'>
+                <div id = 'left'>
+                    <label for="author" id="labels">ავტორი *</label><br>
+                    <input type="text" class="input-field" id="author" placeholder="შეიყვანეთ ავტორი" required>
+                    <div id="validation-messages">
+                        <p class="validation-message" id="message1">მინიმუმ 4 სიმბოლო</p>
+                        <p class="validation-message" id="message2">მინიმუმ 2 სიტყვა</p>
+                        <p class="validation-message" id="message3">მხოლოდ ქართული სიმბოლოები</p>
+                    </div>
+                </div>
+                <div id = 'right'>
+                    <label for="title" id="labels">სათაური *</label><br>
+                    <input type="text" class="input-field" id="title" placeholder="შეიყვანეთ სათაური" required>
+                    <div id="validation-messages">
+                        <p class="validation-message" id="message4">მინიმუმ 2 სიმბოლო</p>
+                    </div>
+                </div>
+            </div>
+            <div id = 'row-desc'>
+                <label for="description" id="labels">აღწერა *</label><br>
+                <textarea class="desc-input" id="description" name="description" rows="4" cols="50" placeholder="შეიყვანეთ აღწერა" required></textarea>
+                <div id="validation-messages">
+                    <p class="validation-message" id="message5">მინიმუმ 4 სიმბოლო</p>
+                </div>
+            </div>
+            <div id="row">
+                <div id = "left">
+                    <label for="post-date" id="labels">გამოქვეყნების თარიღი *</label><br>
+                    <input type="date" class="input-field" id="post-date" required>   
+                </div>
+                <div id = 'right'>
+                    <label for="category" id="labels">კატეგორია *</label><br>
+                    <select class="input-field" id="category" required>
+                        <option value="სამზარეულო">სამზარეულო</option>
+                        <option value="სახელმწიფო">სახელმწიფო</option>
+                        <option value="სასტუმრო">სასტუმრო</option>
+                        <option value="სხვა">სხვა</option>
+                    </select>
+                </div>
+            </div>
+            <div id = 'row'>
+                <div id = 'left'>
+                    <label id="labels" for="email">ელ-ფოსტა</label><br>
+                    <input type="email" class="input-field" id="email" placeholder="Example@redberry.ge">
+                </div>
+            </div>
+            <div id = 'row'>
+                <div id = 'left'>
+                </div>
+                <div id = "right">
+                    <input type="submit" id = 'publish' value="გამოქვეყნება" disabled>
+                </div>
+            </div>
+        </form>
+    </div>
+        
+    
+</body>
+</html>

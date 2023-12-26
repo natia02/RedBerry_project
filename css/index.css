@@ -10,12 +10,14 @@ body{
 
 header{
     background-color: #ffffff;
-    height: 80px;
+    height: 96px !important;
     border: 0px, 0px, 1px, 0px;
 }
 
 #logo{
-    margin-top: 28px;
+    width: 180px;
+    height: 30px;
+    margin-top: 35px;
     margin-left: 76px;
 }
 
@@ -37,13 +39,18 @@ header{
     margin-right: 100px;
 }
 
-#login{
+#logout{
+  margin-left:500px;
+  display: none;
+}
+
+#login, #add-blog{
+    cursor: pointer;
     float: right;
     Width: 93px !important;
     Height: 40px !important;
     margin-top:20px;
-    margin-right:100px;
-    Padding: 10px, 20px, 10px, 20px;
+    margin-right:75px;
     Gap:10px;
     background-color: #5d37f3;
     color: #ffffff;
@@ -55,11 +62,130 @@ header{
     font-family: 'FiraGO', sans-serif;
 }
 
+#add-blog{
+    display: none;
+    width: 153px !important;
+}
+
+
+.modal, .success-modal { 
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    text-align: center;
+    background-color: rgba(243, 242, 250, 0.4);
+  }
+  
+  .modal-content, .success-modal-content {
+    background-color: #ffffff;
+    margin: 19% auto; 
+    padding: 20px;
+    border: 1px;
+    border-radius: 12px;
+    width: 480px;
+    height: 272px; 
+  }
+
+  #inner{
+    margin-top: 40px;
+  }
+
+  #success-message{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    font-family: 'FiraGO', sans-serif;
+  }
+
+  #email-error{
+    display: none;
+    margin-left: 15px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    color: #ea1919;
+  }
+
+  #error-icon, #error-text{
+    font-family: 'FiraGO', sans-serif;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  #login-title{
+    padding-top: 10px;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  #box{
+    margin-top: 30px;
+  }
+
+  #email{
+    padding-left: 15px;
+    width: 432px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1.5px solid #5d37f3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    background-color: #F7F7FF;
+  }
+
+  #submit, #okay{
+    width: 450px;
+    height: 44px;
+    margin-top: 25px;
+    border-radius: 8px;
+    padding: 10px, 20px, 10px, 20px;
+    gap: 10px;
+    color: #ffffff;
+    border: none;
+    background-color: #5d37f3;
+    font-family: 'FiraGO', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .email_title{
+    margin-left: -370px;;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: left;
+  }
+  
+  .close {
+    width: 24px;
+    height: 24px;
+    color: #1a1a1f;
+    float: right;
+    font-size: 30px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
 #categories {
     display: flex;
     gap: 15px;
     justify-content: center;
-    margin-top: 350px;
+    margin-top: 375px;
 }
 
 .category {

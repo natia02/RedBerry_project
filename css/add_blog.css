@@ -1,0 +1,201 @@
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400');
+
+body{
+    font-family: 'FiraGO', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#FBFAFF;
+    
+}
+
+#logo{
+    width: 180px;
+    height: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96px; 
+    border-bottom: 1px solid #E4E3EB;
+    background-color: #ffffff;
+}
+
+#container{
+    width: 700px;
+    margin-left: 550px;
+    margin-top: 50px;
+}
+
+#row {
+    justify-content: space-between;
+    display: flex;
+}
+
+#row, #row-desc, #row-img{
+    margin-bottom: 30px;
+}
+
+#left, #right{
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+#head-title{
+    font-size: 36px;
+    font-weight: 900;
+    color:#1A1A1F;
+    line-height: 40px;
+    font-family: 'FiraGO', sans-serif;
+}
+
+.input-field{
+    font-family: 'FiraGO', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    width: 300px;
+    height: 44px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: 1px solid #E4E3EB;
+    background-color: #fcfcfd;
+    padding: 0 0 0 15px;
+}
+
+.desc-input{
+    font-family: 'FiraGO', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    width: 650px;
+    height: 130px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: 1px solid #E4E3EB;
+    background-color: #fcfcfd;
+    padding: 15px;
+}
+
+
+#labels{
+    color: #1A1A1F;
+    font-family: 'FiraGO', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+#validation-messages{
+    color: #85858D;
+}
+
+#message1, #message2, #message3 {
+    position: relative;
+    margin-left: 20px;
+    
+}
+
+#message1::before, #message2::before, #message3::before {
+    content: '\2022'; 
+    color: #85858D; 
+    position: absolute;
+    left: -15px; 
+}
+
+
+#publish {
+    width: 300px;
+    height: 44px;
+    background-color: #5D37F3; 
+    color: #ffffff;
+    cursor: pointer; 
+    border-radius: 8px;
+    border: none;
+    gap: 10px;
+    line-height: 20px;
+    font-family: 'FiraGO', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-size: 16px;
+}
+
+#publish:disabled{
+    background-color: #E4E3EB;
+}
+
+.image{
+    display: none;
+}
+
+#img-container{
+    width: 650px;
+    height: 200px;
+    border: 1px dashed #85858D;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #F4F3FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#custom-label{
+    cursor: pointer;
+    font-family: 'FiraGO', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1A1A1F;
+    margin-top: 10px;
+}
+
+#choose{
+    font-family: 'FiraGO', sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+#upload-icon{
+    margin-top: -30px;
+}
+
+#uploaded{
+    display: none;
+    margin-top: 10px;
+    width: 650px;
+    height: 60px;
+    border-radius: 12px;
+    background-color: #f2f2fa;
+    
+}
+
+#remove-img{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#gallery{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#img-name{
+    all:unset;
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'FiraGO', sans-serif;
+    font-weight: 500;
+    line-height: 20px;
+    margin-left: 5px;
+}
+
+

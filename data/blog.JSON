@@ -1,68 +1,85 @@
 {
-    "data": [
+    "data":[
       {
         "id": 1,
-        "title": "EOMM-ის მრჩეველთა საბჭოს ნინო ეგაძე შეუერთდა",
-        "description": "Blog description",
-        "image": "https://via.placeholder.com/150",
-        "publish_date": "2023-11-19 00:00:00",
-        "categories": [
-          {
-            "id": 1,
-            "name": "Category name",
-            "text_color": "#ffffff",
-            "background_color": "#000000"
-          }
-        ],
-        "author": "ნია გოგსაძე"
+        "title": "Navigating the Waves: Market Trends You Can't Ignore in 2023",
+        "description": "Embark on a transformative journey with Emily Johnson as she meticulously unveils the intricate tapestry of global market trends in her compelling blog. This comprehensive analysis is not merely a snapshot of current market conditions; it's a strategic roadmap guiding entrepreneurs, investors, and industry enthusiasts through the dynamic ebb and flow of opportunities and challenges shaping diverse sectors. Dive deep into the realms of market dynamics, economic forces, and consumer behaviors as Emily weaves together insights, data, and foresight, creating an indispensable resource for anyone navigating the ever-evolving marketplace.",
+        "publish_date": "2023-03-15 22:00:00",
+        "categories": ["მარკეტი", "კვლევა", "სამუშაო გარემო"],
+        "author": "Emily Johnson"
       },
       {
         "id": 2,
-        "title": "Blog title",
-        "description": "Blog description",
-        "image": "https://via.placeholder.com/150",
-        "publish_date": "2023-11-19 00:00:00",
-        "categories": [
-          {
-            "id": 1,
-            "name": "Category name",
-            "text_color": "#ffffff",
-            "background_color": "#000000"
-          }
-        ],
-        "author": "გელა გელაშვილი"
+        "title": "Beyond the Buzz: Unraveling the Future of AI Applications",
+        "description": "Dr. Alex Rodriguez, a luminary in the field of artificial intelligence, beckons readers into the future in his illuminating blog. This isn't just a glimpse into the world of AI; it's a visionary exploration of the profound impact AI is having on our daily lives. Driven by real-world applications, this blog transcends the commonplace narratives, revealing the transformative potential of AI across healthcare, finance, and beyond. Join Dr. Rodriguez on this intellectual expedition, where the intersection of technology and human experience takes center stage.",
+        "publish_date": "2023-04-05 18:03:00",
+        "categories": ["ხელოვნური ინტელექტი", "აპლიკაცია"],
+        "author": "Dr. Alex Rodriguez"
       },
       {
         "id": 3,
-        "title": "Blog title",
-        "description": "Blog description",
-        "image": "https://via.placeholder.com/150",
-        "publish_date": "2023-11-19 00:00:00",
-        "categories": [
-          {
-            "id": 1,
-            "name": "Category name",
-            "text_color": "#ffffff",
-            "background_color": "#000000"
-          }
-        ],
-        "author": "გელა გელაშვილი"
+        "title": "Mastering the Art: Creating Seamless UI/UX Experiences",
+        "description": "Sarah Thompson, a virtuoso in the art of design, invites readers on a captivating journey in her blog. Beyond the conventional design tutorials, this blog is an immersive experience into the principles and practices that define exceptional user interfaces. Delve into the psychology of user interaction, the aesthetics of design, and the symbiotic dance between form and function. Whether you're a seasoned designer or a budding enthusiast, Sarah's insights promise to elevate your understanding of the craft, fostering a new appreciation for the seamless integration of design and user experience.",
+        "publish_date": "2023-05-10 12:03:00",
+        "categories": ["UI/UX", "დამზადება"],
+        "author": "Sarah Thompson"
       },
       {
         "id": 4,
-        "title": "Blog title",
-        "description": "Blog description",
-        "image": "https://via.placeholder.com/150",
-        "publish_date": "2023-11-19 00:00:00",
-        "categories": [
-          {
-            "id": 1,
-            "name": "Category name",
-            "text_color": "#ffffff",
-            "background_color": "#000000"
-          }
-        ],
-        "author": "გელა გელაშვილი"
+        "title": "Figma Unleashed: Transforming Design Collaboration",
+        "description": "Jason Lee, a trailblazer in the design community, unveils the transformative power of Figma in his groundbreaking blog. This isn't merely a tutorial on a design tool; it's a manifesto on collaborative creativity. Jason explores how Figma transcends traditional design boundaries, fostering seamless collaboration among design teams. Through insightful tips and innovative strategies, this blog is a beacon for designers seeking to amplify their creative potential and redefine the landscape of design collaboration.",
+        "publish_date": "2023-06-02 15:00:34",
+        "categories": ["Figma", "დამზადება"],
+        "author": "Jason Lee"
+      },
+      {
+        "id": 5,
+        "title": "Breaking Boundaries: Innovations in Medical Research",
+        "description": "Dr. Olivia Chen, a luminary at the forefront of medical research, beckons readers into a realm of groundbreaking discoveries in her blog. Beyond the confines of conventional healthcare narratives, this blog is a portal to the future, where cutting-edge technologies and scientific breakthroughs converge. From personalized medicine to revolutionary therapies, Dr. Chen's insights promise to unravel the intricacies of medical innovation, offering readers a glimpse into the transformative potential of research on the forefront of healthcare.",
+        "publish_date": "2023-07-20 15:06:00",
+        "categories": ["კვლევა", "სამედიცინო", "კომპიუტერული მეცნიერება"],
+        "author": "Dr. Olivia Chen"
+      },
+      {
+        "id": 6,
+        "title": "Decoding the Algorithms: A Journey into Computer Science",
+        "description": "Professor Michael Adams, an erudite scholar in the realm of computer science, takes readers on a profound journey in his enlightening blog. More than a mere exploration of programming languages and algorithms, this blog is a scholarly odyssey into the very essence of computer science. Join Professor Adams as he demystifies the complexities, unravels the theoretical underpinnings, and explores the latest research shaping the digital landscape. Whether you're a seasoned coder or an aspiring enthusiast, this blog promises a comprehensive understanding of the driving forces behind technological innovation.",
+        "publish_date": "2023-08-08 11:11:11",
+        "categories": ["კომპიუტერული მეცნიერება", "კვლევა", "სხვა"],
+        "author": "Professor Michael Adams"
+      },
+      {
+        "id": 7,
+        "title": "Soundscapes 2.0: Exploring the Intersection of Music and Technology",
+        "description": "Alicia Turner, a visionary at the intersection of music and technology, invites readers into a symphony of innovation in her blog. This isn't merely a discourse on music and technology; it's an immersive experience into the future of sonic exploration. From AI-generated compositions that push the boundaries of creativity to immersive concert experiences that redefine the live music landscape, Alicia's blog is a backstage pass to the evolution of musical expression in the digital age.",
+        "publish_date": "2023-09-12 00:00:00",
+        "categories": ["მუსიკა", "სხვა"],
+        "author": "Alicia Turner"
+      },
+      {
+        "id": 8,
+        "title": "Productivity Unleashed: Optimizing Your Work Environment",
+        "description": "Mark Williams, a productivity guru, shares his transformative insights in the blog. More than a collection of tips, this blog is a comprehensive guide to architecting a workspace that transcends the mundane. Dive into the psychology of productivity, explore the symbiotic relationship between environment and efficiency, and emerge with a blueprint to transform your workspace into a productivity powerhouse. Mark's blog is your compass to navigate the intricacies of the modern work environment, unlocking your full potential in the process.",
+        "publish_date": "2023-10-05 09:20:20",
+        "categories": ["სამუშაო გარემო", "სხვა"],
+        "author": "Mark Williams"
+      },
+      {
+        "id": 9,
+        "title": "Architectural Marvels: The Art of Building in the Modern Era",
+        "description": "Danielle Parker, an architectural virtuoso, takes readers on an odyssey through time and space in her magnum opus. This blog transcends the ordinary narratives of architecture; it's a celebration of the marriage between form and function, aesthetics and utility. From awe-inspiring structures to avant-garde designs, Danielle's blog is a visual feast for enthusiasts and professionals alike. Immerse yourself in the world of architectural marvels and witness the ongoing transformation of urban landscapes in the 21st century.",
+        "publish_date": "2023-11-15 07:10:01",
+        "categories": ["სამშენებლო", "სხვა"],
+        "author": "Danielle Parker"
+      },
+      {
+        "id": 10,
+        "title": "Beyond the Field: The Science Behind Sports Performance",
+        "description": "Dr. James Mitchell, a maestro in the realm of sports science, opens the doors to a realm of unparalleled athleticism in his blog. More than a mere exploration of physical prowess, this blog is a scientific odyssey into the nuances of sports performance. Delve into the intricacies of biomechanics, nutrition, and cutting-edge research shaping the training methods and strategies of athletes across various sports disciplines. Dr. Mitchell's blog is your playbook for understanding the dedication, innovation, and scientific precision that underpin athletic excellence. Unleash the science behind sports performance and elevate your appreciation for the dynamic intersection of science and sport.",
+        "publish_date": "2023-12-08 12:10:30",
+        "categories": ["სპორტი", "მარკეტი", "კვლევა"],
+        "author": "Dr. James Mitchell"
       }
     ]
+    
 }

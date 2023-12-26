@@ -33,4 +33,35 @@ function getAllCategories() {
     }).then(response => response.json());
 }
 
-export { createBlog, getAllBlogs, getAllCategories };
+
+function validateEmail(email) {
+  return fetch(`${apiBaseUrl}/login`, {  
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ email: email })
+  })
+  .then(response => {
+    if (response.status === 204) {
+      // User logged in successfully (status 204)
+      return { success: true, message: 'User logged in successfully' };
+    } else if (response.status === 422) {
+      // Invalid email (status 422)
+      return { success: false, message: 'Invalid email' };
+    } else {
+      throw new Error('Network response was not ok');
+    }
+  })
+  .catch(error => {
+    // Handle other errors
+    return { success: false, message: 'Network error' };
+  });
+}
+
+
+
+
+
+export { createBlog, validateEmail, getAllBlogs, getAllCategories, apiBaseUrl };

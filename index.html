@@ -7,12 +7,50 @@
     <link rel="stylesheet" href="css/index.css">
     <script type="module" src="js/api.js"></script>
     <script type="module" src="js/categories.js"></script>
+    <script type="module" src="js/login.js"></script>
 </head>
 <body>
+
+    
     <header>
-        <img id="logo" src="media/LOGO-02 3.png" alt="logo">
+        <a href="index.html">
+            <img id="logo" src="media/LOGO-02 3.png" alt="logo">
+        </a>
         <button onclick="" id="login">შესვლა</button>
+        <button onclick="" id="add-blog">დაამატე ბლოგი</button>
     </header>
+    <button onclick="" id="logout">გამოსვლა</button>
+    <div id = 'myModal' class="modal">
+        <div class="modal-content" id = "modal-content">
+            <span class="close" id = "close1">&times;</span>
+            <form action="php/login.php" method="POST">
+                <h1 id="login-title">შესვლა</h1>
+                <div id = 'box'>
+                    <label for="email" class="email_title">ელ-ფოსტა</label>
+                    <br>
+                    <input type="text" name="email" id="email" placeholder="Example@redberry.ge">
+                    <br>
+                    <div id="email-error">
+                        <img src="media/info-circle.png" alt="" id="error-icon">
+                        <p id="error-text"></p>
+                    </div>
+                    <input type="submit" id = 'submit' value="შესვლა">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div id = "success-modal" class="success-modal">
+        <div class="success-modal-content">
+            <span class="close" id = "close2">&times;</span>
+            <div id = "inner">
+                <img src="media/tick-circle.png" alt="" id="success-icon">
+                <p id="success-message">წარმატებული ავტორიზაცია</p>
+                <input type="submit" id = 'okay' value="კარგი">
+            </div>
+        </div>
+    </div>
     
     <h1 id = 'title'>ბლოგი</h1>
     <img src="media/Blog-1024x355 1.png" id = 'decoration' alt="">
