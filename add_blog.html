@@ -14,6 +14,10 @@
         </a>
         
     </header>
+
+    <a href="index.html">
+        <img id="back" src="media/Arrow.png" alt="logo">
+    </a>
     
     <div id="container">
         <h1 id = 'head-title'>ბლოგის დამატება</h1>
@@ -22,13 +26,13 @@
                 <label for="photo" id="labels">ატვირთეთ ფოტო</label><br>
                 <div id="uploaded">
                     <img id="gallery" src="media/gallery.png" alt="uploaded-img">
-                    <p id="img-name">hello.png</p>
+                    <span id="img-name">hello.png</span>
                     <div id="remove-img" onclick="removeImage()"><img src="media/add.png" alt="remove-img"></div>
                 </div>
                 <div id="img-container" onclick="triggerFileInput()" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
                     <img id="upload-icon" src="media/folder-add.png" alt="upload-icon"><br>
                     <label for="image" id="custom-label">ჩააგდეთ ფაილი აქ ან <a id="choose">აირჩიეთ ფაილი</a></label>
-                    <input type="file" id="image" name="image" class="image" accept="image/*" onchange="handleFileSelection(this)">
+                    <input type="file" id="image" name="image" class="image" accept="image/*" onchange="handleFileSelection(this)" required>
                 </div>
                 
             </div>
@@ -77,6 +81,10 @@
                 <div id = 'left'>
                     <label id="labels" for="email">ელ-ფოსტა</label><br>
                     <input type="email" class="input-field" id="email" placeholder="Example@redberry.ge">
+                    <div id="validation-message-email">
+                        <img src="media/info-circle.png" alt="" id="error-icon">
+                        <p class="validation-message" id="message6">მეილი უნდა მთავრდებოდეს @redberry.ge-<br>ით</p>
+                    </div>
                 </div>
             </div>
             <div id = 'row'>
