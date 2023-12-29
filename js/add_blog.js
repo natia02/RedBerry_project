@@ -27,25 +27,76 @@ document.addEventListener('DOMContentLoaded', function () {
         if(parsedData.email !== ''){
             validateEmail();
         }
-        validatePostDate();
+        if(parsedData.postDate !== ''){
+            validatePostDate();
+        }
+
+        validateAll();
     }
 });
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    // ... (existing code)
+
     const authorInput = document.getElementById('author');
     const titleInput = document.getElementById('title');
-    const descriptionInput = document.getElementById('description');
     const emailInput = document.getElementById('email');
+    const descriptionInput = document.getElementById('description');
     const postDateInput = document.getElementById('post-date');
 
-    // Attach input event listeners to the fields
-    authorInput.addEventListener('input', validateAuthor);
-    titleInput.addEventListener('input', validateTitle);
-    descriptionInput.addEventListener('input', validateDescription);
-    emailInput.addEventListener('input', validateEmail);
-    postDateInput.addEventListener('input', validatePostDate);
+    authorInput.addEventListener('input', function () {
+        validateAuthor();
+        validateAll();
+    });
+
+    titleInput.addEventListener('input', function () {
+        validateTitle();
+        validateAll();
+    });
+
+    emailInput.addEventListener('input', function () {
+        validateEmail();
+        validateAll();
+    });
+
+    descriptionInput.addEventListener('input', function () {
+        validateDescription();
+        validateAll();
+    });
+
+    postDateInput.addEventListener('input', function () {
+        validatePostDate();
+        validateAll();
+    });
+
 });
+
+function validateImageUpload() {
+    const savedData = JSON.parse(sessionStorage.getItem('blogFormData')) || {};
+    const imgDataUrl = savedData.imgDataUrl;
+    
+    return !!imgDataUrl; // Returns true if imgDataUrl is truthy (image uploaded), false otherwise
+}
+
+function boolValidateAuthor() {
+    const authorInput = document.getElementById('author');
+    
+    const authorValue = authorInput.value.trim();
+
+    const isLengthValid = authorValue.length >= 4;
+    const isWordCountValid = authorValue.split(' ').filter(Boolean).length >= 2;
+    const containsOnlyGeorgian = /^[ა-ჰ\s]+$/.test(authorValue);
+
+
+    if(isLengthValid && isWordCountValid && containsOnlyGeorgian) {
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
 
 function validateAuthor() {
     const authorInput = document.getElementById('author');
@@ -88,9 +139,18 @@ function validateAuthor() {
         authorInput.style.border = '1px solid #14D81C';
         authorInput.style.backgroundColor = '#F8FFF8';
     }
-
-    // Save data to sessionStorage
     saveFormDataToSessionStorage();
+
+    
+}
+
+function boolValidateTitle() {
+    const titleInput = document.getElementById('title');
+
+    const titleValue = titleInput.value.trim();
+
+    const isLengthValid = titleValue.length >= 2;
+    return isLengthValid;
 }
 
 function validateTitle() {
@@ -112,8 +172,27 @@ function validateTitle() {
         titleInput.style.backgroundColor = '#Faf2f3';
     }
 
-    // Save data to sessionStorage
     saveFormDataToSessionStorage();
+}
+
+function boolValidateEmail() {
+    const emailInput = document.getElementById('email');    
+
+    const emailValue = emailInput.value.trim();
+
+    const isValidEmail = /^[^@]+@redberry\.ge$/.test(emailValue);
+
+    if(emailValue === '') {
+        return true;
+    }
+
+    if(isValidEmail) {
+        return true;
+    }else if(!isValidEmail) {
+        return false;
+    
+    }
+
 }
 
 function validateEmail() {
@@ -124,13 +203,20 @@ function validateEmail() {
 
     const emailValue = emailInput.value.trim();
 
-    const isValidEmail = emailValue.endsWith('@redberry.ge');
+    const isValidEmail = /^[^@]+@redberry\.ge$/.test(emailValue);
+
+    if(emailValue === '') {
+        validationDiv.style.display = 'none';
+        emailMessage6.style.color = '#14D81C';
+        emailInput.style.border = '1px solid #14D81C';
+        emailInput.style.backgroundColor = '#F8FFF8';
+    }
 
     if(isValidEmail) {
         validationDiv.style.display = 'none';
         emailMessage6.style.color = '#14D81C';
         emailInput.style.border = '1px solid #14D81C';
-        emailInput.style.backgroundColor = '#F8FFF8';
+        emailInput.style.backgroundColor = '#F8FFF8'; 
     }else if(!isValidEmail) {
         validationDiv.style.display = 'block';
         emailMessage6.style.color = '#EA1919';
@@ -143,27 +229,49 @@ function validateEmail() {
 
 }
 
+function boolValidateDescription() {
+    const descriptionInput = document.getElementById('description');
+
+    const descriptionValue = descriptionInput.value.trim();
+
+    const isLengthValid = descriptionValue.length >= 4;
+
+    return isLengthValid;
+    
+}
+
 function validateDescription() {
     const descriptionInput = document.getElementById('description');
     const descriptionMessage5 = document.getElementById('message5');
 
     const descriptionValue = descriptionInput.value.trim();
 
-    // Validation rule for description
     const isLengthValid = descriptionValue.length >= 4;
 
     if(isLengthValid) {
         descriptionMessage5.style.color = '#14D81C';
         descriptionInput.style.border = '1px solid #14D81C';
         descriptionInput.style.backgroundColor = '#F8FFF8';
+        
     }else if(!isLengthValid) {
         descriptionMessage5.style.color = '#EA1919';
         descriptionInput.style.border = '1px solid #EA1919';
         descriptionInput.style.backgroundColor = '#Faf2f3';
     }
-
-    // Save data to sessionStorage
+    
     saveFormDataToSessionStorage();
+}
+
+function boolValidatePostDate() {
+    const postDateInput = document.getElementById('post-date');
+
+    const postDateValue = postDateInput.value.trim();
+
+
+    const isValidDate = Date.parse(postDateValue);
+
+    return isValidDate;
+    
 }
 
 
@@ -172,14 +280,56 @@ function validatePostDate() {
 
     const postDateValue = postDateInput.value.trim();
 
-    // Validation rule for post date
+
     const isValidDate = Date.parse(postDateValue);
 
     if(isValidDate) {
         postDateInput.style.border = '1px solid #14D81C';
         postDateInput.style.backgroundColor = '#F8FFF8';
+    }else if(!isValidDate) {
+        postDateInput.style.border = '1px solid #EA1919';
+        postDateInput.style.backgroundColor = '#Faf2f3';
     }
+
     saveFormDataToSessionStorage();
+    
+}
+
+function boolValidateCategories() {
+    const selectedCategories = document.querySelectorAll('.selected-item');
+
+    return !(selectedCategories.length === 0);
+}
+
+
+
+function validateCategories() {
+    const selectedCategories = document.querySelectorAll('.selected-item');
+    const categoryContainer = document.getElementById('dropdown-container');
+
+    if (selectedCategories.length === 0) {
+        categoryContainer.style.border = '1px solid #EA1919';
+        categoryContainer.style.backgroundColor = '#Faf2f3';
+    } else {
+        categoryContainer.style.border = '1px solid #14D81C';
+        categoryContainer.style.backgroundColor = '#F8FFF8';
+    }
+
+    saveFormDataToSessionStorage();
+}
+
+
+function validateAll() {
+    const isAuthorValid = boolValidateAuthor();
+    const isTitleValid = boolValidateTitle();
+    const isEmailValid = boolValidateEmail();
+    const isDescriptionValid = boolValidateDescription();
+    const isPostDateValid = boolValidatePostDate();
+    const areCategoriesValid = boolValidateCategories();
+    const isImageUploaded = validateImageUpload();
+    
+    const publishButton = document.getElementById('publish');
+    publishButton.disabled = !(isImageUploaded && isAuthorValid && isTitleValid && isEmailValid && isDescriptionValid && isPostDateValid && areCategoriesValid);
 }
 
 
@@ -252,6 +402,7 @@ function updateImageUI(fileName, imgDataUrl) {
     galleryIcon.addEventListener('click', function () {
         openImageInNewTab(imgDataUrl);
     });
+    validateAll();
 
     const imgName = document.getElementById('img-name');
     imgName.addEventListener('click', function () {
@@ -282,9 +433,8 @@ function removeImage() {
         imgContainerDisplay: 'flex',
         imgDataUrl: '', // Remove the Data URL
     };
-
     sessionStorage.setItem('blogFormData', JSON.stringify(dataToSave));
-
+    validateAll();
     fileInput.value = '';
 }
 
@@ -342,6 +492,7 @@ function updateSelectedOptions(checkbox) {
         }
     }
     saveSelectedCategoriesToSessionStorage();
+    validateAll();
 }
 
 function unselectItem(closeButton) {
@@ -377,10 +528,16 @@ function unselectItem(closeButton) {
 function saveSelectedCategoriesToSessionStorage() {
     const selectedCategories = [];
     const checkboxes = document.querySelectorAll('.checkbox-container input:checked');
-
     checkboxes.forEach(checkbox => {
-        selectedCategories.push(checkbox.value); // Save only the value for simplicity
+        selectedCategories.push({
+            id: checkbox.id,
+            value: checkbox.value,
+            backgroundColor: checkbox.getAttribute('data-background-color'),
+            textColor: checkbox.getAttribute('data-text-color'),
+        });
     });
 
+    validateCategories();
+    validateAll();
     sessionStorage.setItem('selectedCategories', JSON.stringify(selectedCategories));
 }

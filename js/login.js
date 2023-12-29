@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
     btn.style.display = "block";
     add_blog.style.display = "none";
     logoutBtn.style.display = "none";
+    sessionStorage.clear();
   }
 
   function closeSuccess() {

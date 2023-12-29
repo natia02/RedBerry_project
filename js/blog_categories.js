@@ -1,7 +1,5 @@
 import { getAllCategories } from './api.js';
 
-let selectedCategories = [];
-
 function displayCategoriesInSelect() {
     const categoryContainer = document.getElementById('categoryContainer');
     
@@ -14,6 +12,7 @@ function displayCategoriesInSelect() {
                 label.className = 'checkbox-label';
                 const checkbox = document.createElement('input');
                 checkbox.type = 'checkbox';
+                checkbox.id = category.id;
                 checkbox.value = category.title;
                 checkbox.dataset.backgroundColor = category.background_color; // Set the data attribute
                 checkbox.dataset.textColor = category.text_color; // Set the data attribute
@@ -48,14 +47,17 @@ function restoreSelectedCategories() {
     const checkboxes = document.querySelectorAll('.checkbox-container input');
 
     checkboxes.forEach(checkbox => {
-        if (savedCategories.includes(checkbox.value)) {
+        const matchingCategory = savedCategories.find(category => category.id === checkbox.id);
+
+        if (matchingCategory) {
             checkbox.checked = true;
             updateSelectedOptions(checkbox); // This will update the UI
         }
     });
+
+
 }
 
 
 
 displayCategoriesInSelect();
-
