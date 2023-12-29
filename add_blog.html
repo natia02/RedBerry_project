@@ -100,11 +100,17 @@
                 <div id = 'left'>
                 </div>
                 <div id = "right">
-                    <input type="submit" id = 'publish' value="გამოქვეყნება" disabled>
+                    <input type="submit" id = 'publish' onclick="home()" value="გამოქვეყნება" disabled>
                 </div>
             </div>
         </form>
     </div>
+
+    <script>
+        function home(){
+            window.location.href = "index.html";
+        }
+    </script>
         
 </body>
 </html>
